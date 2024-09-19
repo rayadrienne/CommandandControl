@@ -67,10 +67,30 @@
 
   ![image](https://github.com/user-attachments/assets/498c699f-b67c-4802-bd46-fb780bdbd114)
 
-- Press done a few more times until you get to this screen. I was super original and chose my name to be User, My server name to be Attack, Username to be user and password to be password. You can choose whatever you would like, security isn't a huge concern, we will nuke these machines when we are done. 
+- Press done a few more times until you get to this screen. I was super original and chose my name to be User, My server name to be Attack, Username to be user and password to be password. You can choose whatever you would like, security isn't a huge concern, we will nuke these machines when we are done.
+- On the next screen, check Yes for OpenSSH server.
+- Keep clicking done until you see it start to install packages, finish and say "Install complete!" 
+
+![image](https://github.com/user-attachments/assets/7031453c-a3c8-4ea8-9c5c-634d2b0fdc59)
+
+- If it hangs here, just press enter and keep going.
+- It should finish and then ask you for your <server name> login. Log in with the credentials that I told you to write down earlier. Hope you wrote them down!
+
+![image](https://github.com/user-attachments/assets/7d030113-ff93-4e44-9777-3e1434a1fbdb)
+
+- We now have a functional Ubuntu Server.
+
+- Let's ping google just to make sure everything is working.
+
+  ![image](https://github.com/user-attachments/assets/c05c305e-6cad-45f6-a6bd-5acd084842ca)
 
 
 
+<b> Setup Windows VM in VMware </b>
+
+- Go back to your VMware Workstation and power on your Windows 11 workstation that you imported earlier.
+
+  
 
 
 
