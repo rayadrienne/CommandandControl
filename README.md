@@ -13,20 +13,75 @@
 - 
 ![image](https://github.com/user-attachments/assets/bb92cf64-f1ec-4662-8c39-100d622272c1)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<b> Install the Ubuntu Server </b>
 - Get Ubuntu Server ISO here-  https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-live-server-amd64.iso
-
+- The server version comes preinstalled with required packages. If you get the desktop version it won't work right.
 - 
+- ![image](https://github.com/user-attachments/assets/7a02a7cf-96aa-4197-8f44-a315c4f0d04d)
+
+- Click "Create a New Virtual Machine" on the Home tab of VMWare
+- Choose the ubuntu iso that you just downloaded as the installer disc image file
+- ![image](https://github.com/user-attachments/assets/340ceda6-7059-427b-a315-67f6f4cc9cc3)
+
+- I reduced my disk size to 14gb, the recommended is 20gb.
+
+  ![image](https://github.com/user-attachments/assets/725e3e50-6a76-4d51-a0c6-9fe76bf44888)
+
+  - On the next page, click "customize hardware"
+
+  ![image](https://github.com/user-attachments/assets/3f25bf3c-0005-4565-88e2-582d831b60ce)
+
+  - I reduced the memory to 2gb from 4gb and kept the processors at 2. Keep all the other defaults the same and continue. 
+ 
+    ![image](https://github.com/user-attachments/assets/5329fc5a-fd06-4d26-9b49-5bb752e28e8e)
+
+- When you get to this screen, stop! We need to find the gateway IP address of the NAT network.
+  - In the VMware workstation, click "edit" at the top
+  - Click “Virtual Network Editor”
+  - Select the “Type: NAT” network
+  - Click “NAT Settings…”
+
+ ![image](https://github.com/user-attachments/assets/48420ff5-08a1-4434-a863-7fdd4dbf82d5)
+
+- Write down your Subnet IP and Gateway IP addresses, we will need them next. 
+![image](https://github.com/user-attachments/assets/0aa2757c-37d2-4dfc-aba4-c52848bc8e38)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
