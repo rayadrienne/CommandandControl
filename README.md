@@ -46,12 +46,28 @@
 - Write down your Subnet IP and Gateway IP addresses, we will need them next. 
 ![image](https://github.com/user-attachments/assets/0aa2757c-37d2-4dfc-aba4-c52848bc8e38)
 
+- You can close out of these screens and go back to the Ubuntu server screen.
+- Press Tab to cycle and Enter to select.
+  
+![image](https://github.com/user-attachments/assets/89f5a885-0f08-478f-aed0-86e9109ec5f3)
 
+- Select Manual.
+  
+![image](https://github.com/user-attachments/assets/2996a6e7-0fb9-4f65-abc6-04ccfe5db4d3)
 
+- Input the subnet and gateway IPs that you wrote down. add /24 to the end of the subnet IP to designate the size of the subnet.
 
+  ![image](https://github.com/user-attachments/assets/6988179f-2749-431f-8bdf-721827823ca9)
 
+- In the Address field, insert the DHCPv4 address above in grey font, minus the cidr notation at the end. 
 
+![image](https://github.com/user-attachments/assets/77fd3ad4-1ddb-4ad0-ad9f-bfbb6c2b533c)
 
+- Write down this static IP address- you're going to need it a few more times.
+
+  ![image](https://github.com/user-attachments/assets/498c699f-b67c-4802-bd46-fb780bdbd114)
+
+- Press done a few more times until you get to this screen. I was super original and chose my name to be User, My server name to be Attack, Username to be user and password to be password. You can choose whatever you would like, security isn't a huge concern, we will nuke these machines when we are done. 
 
 
 
