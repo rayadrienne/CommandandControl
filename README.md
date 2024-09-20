@@ -1,97 +1,129 @@
-- set up VMware Workstation Pro for Personal Use. I installed version 17.6
-- ![image](https://github.com/user-attachments/assets/133ecdf0-391c-4996-934e-4c876eb6ab1b)
+# Setup Guide for VMware Workstation Pro and Windows & Ubuntu Virtual Machines
 
-- Workstation Pro 17 is now free for everyone, make sure you tic personal use. 
-![image](https://github.com/user-attachments/assets/055b052e-f4fe-4509-b301-bd1572ff20f6)
+Welcome to this guide on setting up VMware Workstation Pro for personal purposes, and installing Windows and Ubuntu Server virtual machines (VMs).
 
-- Download the VMware version of Windows 11 from Windows Developer here: https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/
-- Be mindful of the expiration date of this virtual machine. For example, mine will only last until October 23rd, 2024. If I need another one after that, I can always download it again. 
+## Setting Up VMware Workstation Pro
 
-![image](https://github.com/user-attachments/assets/24c9ab19-05e3-42a6-afbb-2ca2e8ece62d)
+VMware Workstation Pro is a powerful virtualization software that allows users to run multiple operating systems on a single physical machine. Here's how you can set it up for personal use.
 
-- It will take a few minutes to download. Once complete, unzip the downloaded package and double click on the .ovf file. Choose to open the file with VMWare. Provide a name and storage path for the VM. (I put the exp. date in the title of this VM and kept the default storage location)
-- 
-![image](https://github.com/user-attachments/assets/bb92cf64-f1ec-4662-8c39-100d622272c1)
+### 1. Install VMware Workstation Pro
 
-<b> Install the Ubuntu Server </b>
-- Get Ubuntu Server ISO here-  https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-live-server-amd64.iso
-- The server version comes preinstalled with required packages. If you get the desktop version it won't work right.
-- 
-- ![image](https://github.com/user-attachments/assets/7a02a7cf-96aa-4197-8f44-a315c4f0d04d)
+First, ensure you download and install version 17.6 of VMware Workstation Pro, as it is now free for personal use.
 
-- Click "Create a New Virtual Machine" on the Home tab of VMWare
-- Choose the ubuntu iso that you just downloaded as the installer disc image file
-- ![image](https://github.com/user-attachments/assets/340ceda6-7059-427b-a315-67f6f4cc9cc3)
+![VMware Workstation Pro Installation](https://github.com/user-attachments/assets/133ecdf0-391c-4996-934e-4c876eb6ab1b)
 
-- I reduced my disk size to 14gb, the recommended is 20gb.
+### 2. License for Personal Use
 
-  ![image](https://github.com/user-attachments/assets/725e3e50-6a76-4d51-a0c6-9fe76bf44888)
+When you install VMware Workstation Pro, select "Personal Use" when prompted to ensure you're complying with the license agreement.
 
-  - On the next page, click "customize hardware"
+![VMware Workstation Pro License Selection](https://github.com/user-attachments/assets/055b052e-f4fe-4509-b301-bd1572ff20f6)
 
-  ![image](https://github.com/user-attachments/assets/3f25bf3c-0005-4565-88e2-582d831b60ce)
+### 3. Download Windows 11 VM
 
-  - I reduced the memory to 2gb from 4gb and kept the processors at 2. Keep all the other defaults the same and continue. 
- 
-    ![image](https://github.com/user-attachments/assets/5329fc5a-fd06-4d26-9b49-5bb752e28e8e)
+You can obtain a pre-configured Windows 11 virtual machine, optimized for developers, from the official Windows Developer website:
 
-- When you get to this screen, stop! We need to find the gateway IP address of the NAT network.
-  - In the VMware workstation, click "edit" at the top
-  - Click “Virtual Network Editor”
-  - Select the “Type: NAT” network
-  - Click “NAT Settings…”
+[Download Windows 11 VM](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/)
 
- ![image](https://github.com/user-attachments/assets/48420ff5-08a1-4434-a863-7fdd4dbf82d5)
+> **Note:** This VM has an expiration date, after which you can re-download if needed. For instance, the VM I used will expire on October 23rd, 2024.
 
-- Write down your Subnet IP and Gateway IP addresses, we will need them next. 
-![image](https://github.com/user-attachments/assets/0aa2757c-37d2-4dfc-aba4-c52848bc8e38)
+![Windows 11 VM Download](https://github.com/user-attachments/assets/24c9ab19-05e3-42a6-afbb-2ca2e8ece62d)
 
-- You can close out of these screens and go back to the Ubuntu server screen.
-- Press Tab to cycle and Enter to select.
-  
-![image](https://github.com/user-attachments/assets/89f5a885-0f08-478f-aed0-86e9109ec5f3)
+### 4. Import and Configure Windows 11 VM
 
-- Select Manual.
-  
-![image](https://github.com/user-attachments/assets/2996a6e7-0fb9-4f65-abc6-04ccfe5db4d3)
+- Once your download is complete, extract the contents and double-click the `.ovf` file. 
+- Choose to open the file with VMware and set a name and storage path for the VM. Consider including the experiment date in the VM's title for easy reference.
 
-- Input the subnet and gateway IPs that you wrote down. add /24 to the end of the subnet IP to designate the size of the subnet.
+![Import and Configure Windows 11 VM](https://github.com/user-attachments/assets/bb92cf64-f1ec-4662-8c39-100d622272c1)
 
-  ![image](https://github.com/user-attachments/assets/6988179f-2749-431f-8bdf-721827823ca9)
+## Installing Ubuntu Server on VMware
 
-- In the Address field, insert the DHCPv4 address above in grey font, minus the cidr notation at the end. 
+### 1. Download Ubuntu Server ISO
 
-![image](https://github.com/user-attachments/assets/77fd3ad4-1ddb-4ad0-ad9f-bfbb6c2b533c)
+Get the image file for Ubuntu Server using the following link:
 
-- Write down this static IP address- you're going to need it a few more times.
+[Download Ubuntu Server 22.04.1 ISO](https://releases.ubuntu.com/22.04.1/ubuntu-22.04.1-live-server-amd64.iso)
 
-  ![image](https://github.com/user-attachments/assets/498c699f-b67c-4802-bd46-fb780bdbd114)
+![Ubuntu Server Download](https://github.com/user-attachments/assets/7a02a7cf-96aa-4197-8f44-a315c4f0d04d)
 
-- Press done a few more times until you get to this screen. I was super original and chose my name to be User, My server name to be Attack, Username to be user and password to be password. You can choose whatever you would like, security isn't a huge concern, we will nuke these machines when we are done.
-- On the next screen, check Yes for OpenSSH server.
-- Keep clicking done until you see it start to install packages, finish and say "Install complete!" 
+### 2. Create a New VM for Ubuntu Server
 
-![image](https://github.com/user-attachments/assets/7031453c-a3c8-4ea8-9c5c-634d2b0fdc59)
+- Select "Create a New Virtual Machine" on the VMWare Home tab.
+- For the installer disc image file, choose the downloaded Ubuntu ISO.
 
-- If it hangs here, just press enter and keep going.
-- It should finish and then ask you for your <server name> login. Log in with the credentials that I told you to write down earlier. Hope you wrote them down!
+![Create New Ubuntu VM](https://github.com/user-attachments/assets/340ceda6-7059-427b-a315-67f6f4cc9cc3)
 
-![image](https://github.com/user-attachments/assets/7d030113-ff93-4e44-9777-3e1434a1fbdb)
+### 3. Adjust Hardware Specifications
 
-- We now have a functional Ubuntu Server.
+Lower the disk size to what's practical for your use case—I chose 14GB, though 20GB is recommended.
 
-- Let's ping google just to make sure everything is working.
-
-  ![image](https://github.com/user-attachments/assets/c05c305e-6cad-45f6-a6bd-5acd084842ca)
+![Adjust Hardware Specifications](https://github.com/user-attachments/assets/725e3e50-6a76-4d51-a0c6-9fe76bf44888)
 
 
+### Customize Hardware
 
-<b> Setup Windows VM in VMware </b>
+Navigate to the next configuration screen to adjust your hardware settings.
 
-- Go back to your VMware Workstation and power on your Windows 11 workstation that you imported earlier.
+#### Memory and Processors
 
-  
+- On the **Customize Hardware** page, consider reducing the memory allocation. For example, a reduction from 4GB to 2GB is acceptable for most scenarios.
+- Maintain the number of processors at 2 for balanced performance.
 
+![Customize Hardware Memory](https://github.com/user-attachments/assets/3f25bf3c-0005-4565-88e2-582d831b60ce)
+
+![Customize Hardware Processors](https://github.com/user-attachments/assets/5329fc5a-fd06-4d26-9b49-5bb752e28e8e)
+
+### Network Configuration
+
+Before continuing, it's essential to identify the network settings for your virtual environment.
+
+#### Retrieve Network Information
+
+- From the VMware Workstation menu, select **Edit > Virtual Network Editor**.
+- Choose the NAT network option and click on **NAT Settings** to view the details.
+
+![Network Editor](https://github.com/user-attachments/assets/48420ff5-08a1-4434-a863-7fdd4dbf82d5)
+
+Document the Subnet IP and Gateway IP addresses as these will be required for the Ubuntu server network configuration.
+
+![Subnet and Gateway IPs](https://github.com/user-attachments/assets/0aa2757c-37d2-4dfc-aba4-c52848bc8e38)
+
+#### Manual Network Setup
+
+After collecting the network information, proceed with the network setup by selecting **Manual** configuration during the VM setup process.
+
+![Network Configuration Selection](https://github.com/user-attachments/assets/89f5a885-0f08-478f-aed0-86e9109ec5f3)
+
+Input the Subnet and Gateway IPs you have noted and append `/24` to the Subnet IP to denote the subnet size.
+
+![Manual Network Configuration](https://github.com/user-attachments/assets/2996a6e7-0fb9-4f65-abc6-04ccfe5db4d3)
+
+For the Address field, use the suggested DHCPv4 address, excluding the CIDR notation.
+
+![DHCPv4 Address Input](https://github.com/user-attachments/assets/77fd3ad4-1ddb-4ad0-ad9f-bfbb6c2b533c)
+
+Record the designated static IP address; it will be necessary for subsequent stages in the setup.
+
+![Static IP Address](https://github.com/user-attachments/assets/498c699f-b67c-4802-bd46-fb780bdbd114)
+
+### Finalizing Ubuntu Server Installation
+
+After setting the network configuration, complete the installation by providing a server name, username, and password. Additionally, enable the OpenSSH server to allow remote access.
+
+![Ubuntu Server Installation Summary](https://github.com/user-attachments/assets/7031453c-a3c8-4ea8-9c5c-634d2b0fdc59)
+
+In the event the installation process stalls, pressing enter can assist in resuming the setup.
+
+Once installation completes, you will be prompted to log in with the credentials you have chosen.
+
+![Ubuntu Server Login Prompt](https://github.com/user-attachments/assets/7d030113-ff93-4e44-9777-3e1434a1fbdb)
+
+Verification of the setup is crucial. Confirm functional networking by pinging an external site such as Google.
+
+![Ping Test](https://github.com/user-attachments/assets/c05c305e-6cad-45f6-a6bd-5acd084842ca)
+
+## Setting Up Windows VM in VMware
+
+After successfully installing the Ubuntu Server, return to VMware Workstation and power on the previously imported Windows 11 VM for additional configuration and usage.
 
 
 
